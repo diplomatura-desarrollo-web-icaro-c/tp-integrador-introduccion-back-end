@@ -10,7 +10,7 @@ app.set('view engine','ejs');
 
 
 
-app.get('/',(req,res)=>{
+app.get('/',(_req,res)=>{
     res.send('Hola mundo desde el home')
 })
 
@@ -19,4 +19,6 @@ app.get('/',(req,res)=>{
 app.use(express.static(path.join(__dirname,'../public')));
 console.log(__dirname);// devuelve la ruta completa desde c:/.. hasta ../src en donde se esta ejecutando app.js
 
+
+/* iniciamos servidor */
 app.listen(PORT,()=>console.log(`Listen on port ${PORT}`));
