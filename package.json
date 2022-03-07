@@ -1,0 +1,23 @@
+{
+  "name": "tp-integrador-introduccion-back-end",
+  "version": "1.0.0",
+  "description": "tpIntegrador",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diplomatura-desarrollo-web-icaro-c/tp-integrador-introduccion-back-end.git"
+  },
+  "author": "norberto cabrera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diplomatura-desarrollo-web-icaro-c/tp-integrador-introduccion-back-end/issues"
+  },
+  "homepage": "https://github.com/diplomatura-desarrollo-web-icaro-c/tp-integrador-introduccion-back-end#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3"
+  }
+}
