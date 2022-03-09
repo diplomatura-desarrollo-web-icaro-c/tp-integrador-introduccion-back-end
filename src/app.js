@@ -8,6 +8,7 @@ app.set("view engine", "ejs");
 /* --------------------------------------------- */
 
 const persona = {
+  id: "1",
   nombre: "norberto",
   apellido: "cabrera",
   estadoCivil: "soltero",
