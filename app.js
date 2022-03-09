@@ -5,12 +5,19 @@ const ejes = require('ejs');
 
 app.set('view engine','ejs');
 
+///Declaramos un objeto, que tendra nombre y appellido
+const usuario={
+    nombre:'nombre',
+    apellido:'apellido',
+}
+
 app.get('/', (req, res) => {
-    res.send('Hola mundo');
+    res.render('vistas/home',{
+        usuario:usuario
+    });
 });
 
-//Static
-app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.listen(3000, () => console.log('Listening on port 3000'));
 
