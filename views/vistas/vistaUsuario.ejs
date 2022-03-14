@@ -1,4 +1,43 @@
-<h1>Hola, soy <%= usuario.nombre  %></h1>
+<!-- <h1>Hola, soy <%= usuario.nombre  %></h1> 
 <h1>Hola, soy <%= usuario.apellido  %></h1>
-<h1>Hola, soy <%= usuario.email  %></h1>
+<h1>Hola, soy <%= usuario.email  %></h1>  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/views/vistas/css/style.css"/>
+    <title>Usuarios</title>
+</head>
+<body>
+    <header>
+        <h1>UsuariosWeb</h1>
+        <section>
+            <nav>
+                <a>Home</a>
+                <a>Listado</a>
+                <a href="#">Login</a>
+            </nav>
+        </section>
+    </header>
+
+    <main>
+        <section id="section1">
+            <img class="image-1" src="#" alt="Foto del Perfil" >
+        </section>
+
+        <section id="section2">
+            <div>
+                    <p class="nombre"><%= usuario.nombre  %></p>
+                    <p class="apellido"><%= usuario.apellido  %></p>
+                    <p class="mail"><%= usuario.email  %></p>    
+            </div>   
+        </section>
+    </main>
+
+    <footer> Todos los derechos reservados - GDN 2022</footer>
+</body>
+</html>
 
