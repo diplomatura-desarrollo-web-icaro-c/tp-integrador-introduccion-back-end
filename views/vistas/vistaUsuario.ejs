@@ -1,4 +1,39 @@
-<h1>Hola, soy <%= usuario.nombre  %></h1>
-<h1>Hola, soy <%= usuario.apellido  %></h1>
-<h1>Hola, soy <%= usuario.email  %></h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <%-include('../partials/header') %>
+    </header>
+    <main>
+
+       <section id="card">
+           <img src="" alt="">
+           <div id="informacion">
+               <p class="nombre"><%= usuario.nombre  %></p>
+               <p class="apellido"><%= usuario.apellido  %></p>
+               <p class="email"><%= usuario.email  %></p>
+           </div>
+       </section>
+
+        
+
+    </main>
+    <footer>
+        <%-include('../partials/footer') %>
+    </footer>
+
+
+
+</body>
+</html>
+
+
+
 
