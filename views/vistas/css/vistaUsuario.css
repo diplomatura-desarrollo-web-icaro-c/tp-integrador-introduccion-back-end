@@ -1,0 +1,10 @@
+body {
+    display: flex;
+    margin: 0;
+    background: linear-gradient(45deg, white, lightblue);
+    
+
+}
+h1 {
+    color: red;
+}
