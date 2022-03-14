@@ -1,4 +1,32 @@
-<h1>Hola, soy <%= usuario.nombre  %></h1>
-<h1>Hola, soy <%= usuario.apellido  %></h1>
-<h1>Hola, soy <%= usuario.email  %></h1>
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/views/vistas/css/usuario.css" />
+    <title>Usuario</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Esta es la vista del usuario <%=usuario.nombre%></h1>
+    </header>
+    <main>
+      <section class="secDatos">
+        <article id="datosUsuario">
+          <div id="datos">
+            <img src="/views/vistas/img/mail.jpg" alt="imagen de sobre" />
+            <h2>
+              Este es el mail del usuario <%=usuario.nombre%>
+              <%=usuario.apellido%>:
+            </h2>
+            <h3>email: <%=usuario.email%></h3>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <h5>todos los derechos reservados</h5>
+    </footer>
+  </body>
+</html>
