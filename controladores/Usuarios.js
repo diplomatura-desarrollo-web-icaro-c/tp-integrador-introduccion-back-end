@@ -13,9 +13,7 @@ const GetUsuario = (req, res) => {
   const userId = req.params.id;
   const usuarioObtenido = QueryUserById(userId);
 
-  res.render('vistas/vistaUsuario', {
-    usuario: usuarioObtenido
-  })
+  res.render('vistas/vistaUsuario', {usuario: usuarioObtenido})
 };
 
 module.exports = {
