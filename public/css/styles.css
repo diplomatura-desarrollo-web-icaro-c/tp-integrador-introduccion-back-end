@@ -1,0 +1,22 @@
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+}
+
+header{
+    margin:0;
+    padding: 20px;
+    background-color: aqua;
+    text-align: center;
+}
+
+#card{
+    padding: 20px;
+    background-color: blanchedalmond;
+}
+
+footer p{
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
