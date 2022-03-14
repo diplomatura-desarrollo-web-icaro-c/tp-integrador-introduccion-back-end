@@ -9,5 +9,5 @@ const userRoutes = require("../routes/Usuarios");
 app.use("/usuarios", userRoutes);
 
 app.listen(PORT, () => {
-  console.log("Servidor corriendo en puerto ",PORT);
+  console.log("Servidor corriendo en puerto",PORT);
 });

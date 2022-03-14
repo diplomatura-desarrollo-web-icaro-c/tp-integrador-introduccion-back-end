@@ -13,4 +13,5 @@ let INFORMACION_USUARIO = [
   },
 ];
 
+
 module.exports = { INFORMACION_USUARIO: INFORMACION_USUARIO };

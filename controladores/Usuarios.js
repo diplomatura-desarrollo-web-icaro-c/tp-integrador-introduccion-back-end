@@ -8,17 +8,20 @@ const GetAllUsers = (req, res) => {
   return res.json(userList);
 };
 
+const nadie = (req, res) => {
+  res.render('vistas/nadie')
+};
+
+
 
 const GetUsuario = (req, res) => {
   const userId = req.params.id;
   const usuarioObtenido = QueryUserById(userId);
-
-  res.render('vistas/vistaUsuario', {
-    usuario: usuarioObtenido
-  })
+  res.render('vistas/vistaUsuario', {usuario: usuarioObtenido})
 };
 
 module.exports = {
   GetAllUsers,
-  GetUsuario
+  GetUsuario,
+  nadie
 };
