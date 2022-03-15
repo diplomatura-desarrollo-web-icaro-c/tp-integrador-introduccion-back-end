@@ -18,7 +18,12 @@ const GetUsuario = (req, res) => {
   })
 };
 
+const VistaNuevaSinUsuario = (req, res) => {
+    res.render('vistas/vistaEjemplo');
+};
+
 module.exports = {
   GetAllUsers,
-  GetUsuario
+  GetUsuario,
+  VistaNuevaSinUsuario
 };
