@@ -18,7 +18,27 @@ const GetUsuario = (req, res) => {
   })
 };
 
+const GetFormulario = (req, res) => {
+  res.render('vistas/formulario');
+};
+
+const ProcesarFormulario = (req, res) => {
+  var nombre = req.body.nombre;
+  var apellido = req.body.apellido;
+  var usuarioObtenido = {
+    nombre,
+    apellido
+  }
+
+  res.render('vistas/vistaUsuario', {
+    usuario: usuarioObtenido
+  })
+}
+
+
 module.exports = {
   GetAllUsers,
-  GetUsuario
+  GetUsuario,
+  GetFormulario,
+  ProcesarFormulario
 };
