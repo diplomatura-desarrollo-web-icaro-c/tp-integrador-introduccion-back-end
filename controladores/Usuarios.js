@@ -18,6 +18,41 @@ const GetUsuario = (req, res) => {
   })
 };
 
+
+//login
+
+const GetFormularioLogin = (req, res) => {
+  res.render('vistas/login')
+};
+
+/* const PostFormularioLogin2 = (req,res) => {
+  const {email,password} = req.body;
+  const usuarioEnviado={
+    email,password
+  }
+
+  res.render('vistas/mensajeError', {
+    usuario: usuarioEnviado
+  });
+}; */
+
+
+/* respuesta a validaciones */
+const PostFormularioLogin = (req,res,errors)=>{
+  if (!errors.isEmpty()) {
+      // return res.status(400).json({ errors: errors.array() });
+
+      /* const {email,password} = req.body;
+      const usuarioEnviado={email,password} */
+      let validaciones = errors.array()
+      res.render('vistas/mensajeError',{validaciones:validaciones})
+  }
+}
+
+
+
+
+//formulario antiguo
 const GetFormulario = (req, res) => {
   res.render('vistas/formulario')
 };
@@ -33,9 +68,18 @@ const ProcesarFormulario = (req,res) => {
   });
 };
 
+
+
 module.exports = {
   GetAllUsers,
   GetUsuario,
   GetFormulario,
-  ProcesarFormulario
+  ProcesarFormulario,
+  GetFormularioLogin,
+  PostFormularioLogin
 };
+
+
+
+
+
