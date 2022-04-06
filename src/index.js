@@ -1,6 +1,9 @@
 // Make express server
 const express = require("express");
 const bodyParser = require("body-parser");
+const cookiParser = require("cookie-parser");
+const sessions = require("express-session");
+const unDia = 1000 * 60 * 60 * 24;
 const app = express();
 const PORT = 3000;
 
@@ -12,6 +15,14 @@ app.use(express.static(path.join(__dirname, '../public')),
 );
 
 app.set('view engine', 'ejs')
+
+app.use(sessions({
+	secret: "123456",
+	resave: false,
+	saveUninitialized:true, //true ya depreciado config a false ver doc
+	cookie: { maxAge:unDia }
+    //cookie: { maxAge:unMinuto }
+}));
 
 const userRoutes = require("../routes/Usuarios");
 app.use("/usuarios", userRoutes);
