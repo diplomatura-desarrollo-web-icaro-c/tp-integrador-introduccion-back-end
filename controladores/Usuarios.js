@@ -23,16 +23,27 @@ const GetFormulario = (req, res) => {
 };
 
 const ProcesarFormulario = (req, res) => {
+  var vectorUsuarios = QueryListOfUsers();
   var nombre = req.body.nombre;
   var apellido = req.body.apellido;
-  var usuarioObtenido = {
-    nombre,
-    apellido
-  }
 
-  res.render('vistas/vistaUsuario', {
-    usuario: usuarioObtenido
+  for (let i = 0; i < vectorUsuarios.length; i++) {
+    if (vectorUsuarios[i].nombre == nombre
+      && vectorUsuarios[i].apellido == apellido) {
+      var usuarioObtenido = {
+        nombre,
+        apellido
+      }
+
+      res.render('vistas/vistaUsuario', {
+        usuario: usuarioObtenido
+      })
+    }
+  }
+  res.render('vistas/vistaerrorlogueo', {
+
   })
+
 }
 
 
