@@ -5,8 +5,8 @@ const { GetAllUsers, GetUser, GetUsuario, GetFormulario, ProcesarFormulario } = 
 
 router.get("/all", GetAllUsers);
 //router.get("/:id", GetUser);
-router.get("/:id", GetUsuario);
 router.get("/", GetFormulario);
 router.post("/", ProcesarFormulario)
+router.get("/:id", GetUsuario);
 
 module.exports = router;

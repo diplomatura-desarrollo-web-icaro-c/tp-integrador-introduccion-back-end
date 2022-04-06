@@ -25,14 +25,27 @@ const GetFormulario = (req, res) => {
 const ProcesarFormulario = (req, res) => {
   var nombre = req.body.nombre;
   var apellido = req.body.apellido;
-  var usuarioObtenido = {
-    nombre,
-    apellido
-  }
 
-  res.render('vistas/vistaUsuario', {
-    usuario: usuarioObtenido
-  })
+  const userList = QueryListOfUsers();
+
+  userList.forEach(usuario => {
+    if(usuario.nombre == nombre && usuario.apellido == apellido){
+
+      var usuarioObtenido = {
+        nombre,
+        apellido
+      }
+    
+      res.render('vistas/vistaUsuario', {
+        usuario: usuarioObtenido
+      })
+    }
+
+  });
+
+  res.send("<h1> Usuario incorrecto volver al <a href='/usuarios'> formulario</a> </h1>")
+
+
 }
 
 

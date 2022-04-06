@@ -11,6 +11,18 @@ let INFORMACION_USUARIO = [
     email: "email@email.com",
     apellido: "apellidousuario2"
   },
+  {
+    id: 3,
+    nombre: "Usuario 3",
+    email: "email@email.com",
+    apellido: "apellidousuario3"
+  },
+  {
+    id: 4,
+    nombre: "Usuario 4",
+    email: "email@email.com",
+    apellido: "apellidousuario4"
+  },
 ];
 
 module.exports = { INFORMACION_USUARIO: INFORMACION_USUARIO };
