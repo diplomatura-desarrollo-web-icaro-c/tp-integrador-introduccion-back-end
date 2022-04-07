@@ -1,12 +1,38 @@
-<%- include("../partials/header") %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+</head>
+<body>
+    
+    <%- include("../partials/header") %>
+    
+    <div class="container col-6">
+        <h1 class="text-center">Formulario de login</h1>
+        <form action="#" method="POST">
+            <div class="mb-3">
+                <label class="form-label">Nombre:</label><br>
+                <input type="text" placeholder="Nombre" name="nombre" class="form-control" aria-describedby="nameHelp">
+                <div id="nameHelp" class="form-text">El nombre debe ser solo con letras</div>
+            </div>
+    
+            <div class="mb-3">
+                <label class="form-label">Contraseña:</label>
+                <input type="password" placeholder="Contraseña" name="apellido" class="form-control" aria-describedby="passwordHelp">
+                <div id="passwordHelp" class="form-text">El password debe tener minimo 8 caracteres, numeros, letras mayusulas, minusc. y simbolos</div>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Enviar</button><br>
+        </form>
+    </div>
+    
+    
+    <%- include("../partials/footer") %>
+</body>
+</html>
 
-<form action="#" method="POST">
-    <label>Nombre:</label><br>
-    <input type="text" placeholder="Nombre" name="nombre"><br>
-    <label>Apellido:</label><br>
-    <input type="text" placeholder="Apellido" name="apellido"><br>
-    <br>
-    <button>Enviar</button><br>
-</form>
 
-<%- include("../partials/footer") %>
