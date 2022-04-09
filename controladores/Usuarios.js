@@ -28,11 +28,13 @@ const ProcesarFormulario = (req, res) => {
   var apellido = req.body.apellido;
 
   for (let i = 0; i < vectorUsuarios.length; i++) {
-    if (vectorUsuarios[i].nombre == nombre
-      && vectorUsuarios[i].apellido == apellido) {
+    if (vectorUsuarios[i].nombre.toLowerCase() == nombre.toLowerCase()
+      && vectorUsuarios[i].apellido.toLowerCase()  == apellido.toLowerCase()) {
       var usuarioObtenido = {
-        nombre,
-        apellido
+        id:vectorUsuarios[i].id,
+        nombre:vectorUsuarios[i].nombre,
+        apellido:vectorUsuarios[i].apellido,
+        email:vectorUsuarios[i].email
       }
 
       res.render('vistas/vistaUsuario', {
