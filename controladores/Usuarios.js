@@ -1,11 +1,15 @@
+const fetch = require("node-fetch");
 const {
   QueryListOfUsers,
   QueryUserById,
 } = require("../service/UsuarioAccesoFuenteDatos");
 
+
 const GetAllUsers = (req, res) => {
-  const userList = QueryListOfUsers();
-  return res.json(userList);
+  let respuesta = fetch("http://localhost:3001")
+    .then(response => response.json())
+    .then(data => res.json(data))
+  return respuesta
 };
 
 
