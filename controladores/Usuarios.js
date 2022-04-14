@@ -12,14 +12,16 @@ const GetAllUsers = (req, res) => {
   return respuesta
 };
 
-
 const GetUsuario = (req, res) => {
   const userId = req.params.id;
-  const usuarioObtenido = QueryUserById(userId);
-
-  res.render('vistas/vistaUsuario', {
-    usuario: usuarioObtenido
-  })
+  let respuesta = fetch("http://localhost:3001/" + userId)
+    .then(response => response.json())
+    .then(data => 
+      res.render('vistas/vistaUsuario', {
+        usuario: data
+      })
+    )
+  return respuesta
 };
 
 const GetFormulario = (req, res) => {
