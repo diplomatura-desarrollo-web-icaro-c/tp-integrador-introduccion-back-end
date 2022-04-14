@@ -1,22 +1,52 @@
+const { response } = require('express');
+const { json } = require('express/lib/response');
+const fetch = require('node-fetch')
+
 const {
   QueryListOfUsers,
   QueryUserById,
 } = require("../service/UsuarioAccesoFuenteDatos");
 
 const GetAllUsers = (req, res) => {
+ let respuesta = fetch('http://localhost:3001')
+    .then(response => response.json())
+    .then(data => res.json(data))
+  
+  return respuesta;
+};
+
+/* const GetAllUsers = (req, res) => {
   const userList = QueryListOfUsers();
   return res.json(userList);
+}; */
+
+
+// con API
+const GetUsuario = (req, res) => {
+  const userId = req.params.id;
+  /* const usuarioObtenido = QueryUserById(userId); */
+  let respuesta = fetch('http://localhost:3001/'+userId)
+  .then(response => response.json())
+  .then(data => res.render('vistas/vistaUsuario', {
+    usuario: data
+  }))
+
+return respuesta
+  
 };
 
 
-const GetUsuario = (req, res) => {
+//antes de api
+/* const GetUsuario = (req, res) => {
   const userId = req.params.id;
   const usuarioObtenido = QueryUserById(userId);
 
   res.render('vistas/vistaUsuario', {
     usuario: usuarioObtenido
   })
-};
+}; */
+
+
 
 const GetFormulario = (req, res) => {
   res.render('vistas/formulario');
